@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="Josh Geden">
+    <!-- scale page to fit entire screen, so it properly fills non-desktop devices -->    
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- DEV-only for easier refreshing: stop the web browser from ever caching this page or its images -->
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- needed class for pixel level image manipulation -->
+    <script async src="https://www2.cs.duke.edu/courses/compsci290/spring21/resources/code/js/SimpleImage.js"></script>
+    <script defer src="main.js"></script>
+    <title>Image Editor</title>
+</head>
+<body>
+    <div class="page_container">
+        <div class="header">
+            <div class="header_content">
+                <h1>Image Editor</h1>
+                <h3>Josh Geden</h3>
+            </div>
+
+            <div class="navigation_bar_content">
+                <ul>
+                    <li><a href="../index.html">Home Page</a></li>
+                    <li><a href="hobby.html">Interests</a></li>
+                    <!-- <li><a href="courses.html">Courses</a></li> -->
+                    <li><a href="image_edit.html">Image Editor</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="main">
+            <div class="center" id="image_space">
+                <!-- Area used to display image -->
+                <canvas id="imagecanvas"></canvas>
+
+                <p>Image: <input type="file" id="fileInput" multiple="false" accept="image/*" onchange="loadImage()"/> </p>
+                <br>
+                <button id="invert" onclick="invert()">Invert Image</button>
+                <button id="grayscale" onclick="grayscale()">Grayscale Image</button>
+                <!-- <button id="removeRed" onclick="removeRed()">Remove Red</button> -->
+                <button id="addBorder" onclick="addBorder()">Add Border</button>
+                <button id="divideImage" onclick="divideImage()">Split Image</button>
+                <br>
+                <br>
+                <button id="reset" onclick="resetImage()">Reset Image</button>
+                <button id="clear" onclick="clearCanvas()">Clear Image</button>
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="footer_content">
+                <a href="http://creativecommons.org/licenses/by-nc-sa/1.0" target="_blank" rel="noopener_noreferrer">
+                    <img id="creative_commons_logo" class="logo" src="../images/cc_logo.png" alt="creative commons logo">
+                </a>
+                
+                <!-- Use pre-approved by https://brand.linkedin.com/policies -->
+                <a href="https://www.linkedin.com/in/joshua-geden/" target="_blank" rel="noopener_noreferrer"> 
+                    <img id="linkedin_logo" class="logo" src="../images/linkedin_logo.png" alt="linkedin logo">
+                </a>
+
+                <!-- Icon made by Dave Gany from https://www.flaticon.com/authors/dave-gandy -->
+                <a href="https://www.github.com/Josh0823" target="_blank" rel="noopener_noreferrer">
+                    <img id="github_logo" class="logo" src="../images/github_logo.png" alt="github logo">
+                </a>
+
+                <p>Contact me at: <a href="mailto:joshua.geden@duke.edu">joshua.geden@duke.edu</a></p> 
+            </div>
+        </div>
+    </div>
+</body>
+</html>
